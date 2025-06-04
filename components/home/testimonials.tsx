@@ -6,15 +6,11 @@ import { Button } from '@/components/ui/button';
 
 const testimonials = [
   {
-    quote: "Working with InnovaTech Developers was a game-changer for our business. They delivered a stunning website that perfectly captured our brand and has significantly increased our online leads.",
-    author: "Sarah Johnson",
-    company: "Mountain Escape Resort",
+    quote: "Innovatech Developers delivered an excellent website for our school—it's user-friendly, visually appealing, and functions smoothly. We're truly impressed with their quality and professionalism.",
+    author: "Padmalaya High School principal",
+    company: "Padmalaya High School",
   },
-  {
-    quote: "The team at InnovaTech Developers understood our vision immediately and transformed it into a beautiful e-commerce site that's easy to manage and has boosted our sales by 40%.",
-    author: "Michael Chen",
-    company: "Bloom Botanicals",
-  },
+  
  
 ];
 
