@@ -11,7 +11,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-6">About Us</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We're a team of passionate web designers and developers dedicated to creating stunning, functional websites for businesses of all sizes.
+            We are a team of passionate web designers and developers dedicated to creating stunning, functional websites for businesses of all sizes.
           </p>
         </div>
       </section>
@@ -31,13 +31,13 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="text-muted-foreground mb-4">
-                Founded in 2020, WebCraftStudio began with a simple mission: to help businesses succeed online with beautiful, functional websites that drive results.
+                Founded in 2024, InnovaTech Developers began with a simple mission: to help businesses succeed online with beautiful, functional websites that drive results.
               </p>
               <p className="text-muted-foreground mb-4">
-                We noticed that many businesses were struggling with outdated, poorly designed websites that weren't delivering the results they needed. We set out to change that by combining stunning design with strategic thinking and technical expertise.
+                We noticed that many businesses were struggling with outdated, poorly designed websites that were not delivering the results they needed. We set out to change that by combining stunning design with strategic thinking and technical expertise.
               </p>
               <p className="text-muted-foreground">
-                Today, we've helped dozens of businesses transform their online presence with websites that not only look great but also convert visitors into customers.
+                Today, we have helped dozens of businesses transform their online presence with websites that not only look great but also convert visitors into customers.
               </p>
             </div>
           </div>

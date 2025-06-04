@@ -6,20 +6,16 @@ import { Button } from '@/components/ui/button';
 
 const testimonials = [
   {
-    quote: "Working with WebCraftStudio was a game-changer for our business. They delivered a stunning website that perfectly captured our brand and has significantly increased our online leads.",
+    quote: "Working with InnovaTech Developers was a game-changer for our business. They delivered a stunning website that perfectly captured our brand and has significantly increased our online leads.",
     author: "Sarah Johnson",
     company: "Mountain Escape Resort",
   },
   {
-    quote: "The team at WebCraftStudio understood our vision immediately and transformed it into a beautiful e-commerce site that's easy to manage and has boosted our sales by 40%.",
+    quote: "The team at InnovaTech Developers understood our vision immediately and transformed it into a beautiful e-commerce site that's easy to manage and has boosted our sales by 40%.",
     author: "Michael Chen",
     company: "Bloom Botanicals",
   },
-  {
-    quote: "As architects, we needed a portfolio that showcased our work with the same attention to detail that we put into our buildings. WebCraftStudio delivered exactly that and more.",
-    author: "Emily Rodriguez",
-    company: "Urban Architects",
-  },
+ 
 ];
 
 export function Testimonials() {

@@ -1,62 +1,8 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
-import { 
-  Form, 
-  FormControl, 
-  FormField, 
-  FormItem, 
-  FormLabel, 
-  FormMessage 
-} from '@/components/ui/form';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, Send, Loader2 } from 'lucide-react';
-
-// Form schema
-const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters' }),
-  email: z.string().email({ message: 'Please enter a valid email address' }),
-  subject: z.string().min(5, { message: 'Subject must be at least 5 characters' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters' }),
-});
+import { Phone, Mail } from 'lucide-react';
 
 export default function ContactPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
-  // Initialize form
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    },
-  });
-
-  // Handle form submission
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      console.log(values);
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      form.reset();
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
-  }
-
   return (
     <div className="min-h-screen pt-24 pb-16">
       {/* Hero */}
@@ -69,98 +15,28 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form & Info */}
+      {/* WhatsApp Contact & Info */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-              
-              {isSuccess ? (
-                <div className="bg-green-50 border border-green-200 text-green-800 rounded-lg p-6 mb-6">
-                  <h3 className="font-semibold text-lg mb-2">Message Sent Successfully!</h3>
-                  <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
-                </div>
-              ) : (
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Your Name</FormLabel>
-                          <FormControl>
-                            <Input placeholder="John Doe" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email Address</FormLabel>
-                          <FormControl>
-                            <Input placeholder="you@example.com" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="subject"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Subject</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Website Redesign Project" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Your Message</FormLabel>
-                          <FormControl>
-                            <Textarea 
-                              placeholder="Tell us about your project..." 
-                              className="min-h-[120px]"
-                              {...field} 
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <Button type="submit" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? (
-                        <>
-                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          <Send className="mr-2 h-4 w-4" />
-                          Send Message
-                        </>
-                      )}
-                    </Button>
-                  </form>
-                </Form>
-              )}
+            {/* WhatsApp Contact */}
+            <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-center">
+              <h2 className="text-2xl font-bold mb-6 text-center">Contact Through WhatsApp</h2>
+              <a
+                href="https://wa.me/917013405687"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg text-lg font-semibold hover:bg-green-700 transition"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.031-.967-.273-.099-.472-.148-.67.15-.198.297-.767.967-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.099 3.205 5.077 4.372.711.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
+                </svg>
+                Chat on WhatsApp
+              </a>
+              <p className="mt-4 text-muted-foreground text-center">
+                Click the button above to start a WhatsApp chat with us instantly.
+              </p>
             </div>
             
             {/* Contact Info */}
@@ -170,31 +46,21 @@ export default function ContactPage() {
               <div className="space-y-8">
                 <div className="flex items-start">
                   <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <MapPin className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg">Our Location</h3>
-                    <p className="text-muted-foreground">123 Web Street, Digital City, 10001</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
                     <Phone className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Phone</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+91 7013405687</p>
+                    <p className="text-muted-foreground">+91 6304623705</p>
                   </div>
                 </div>
-                
                 <div className="flex items-start">
                   <div className="bg-blue-100 p-3 rounded-full mr-4">
                     <Mail className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Email</h3>
-                    <p className="text-muted-foreground">hello@webcraftstudio.com</p>
+                    <p className="text-muted-foreground">innovatechdeveloperss@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -250,13 +116,6 @@ export default function ContactPage() {
               <h3 className="text-xl font-semibold mb-2">Do you offer website maintenance services?</h3>
               <p className="text-muted-foreground">
                 Yes, we offer ongoing maintenance packages to keep your website secure, up-to-date, and performing optimally. This includes regular updates, security monitoring, backups, and technical support.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">What's your payment process?</h3>
-              <p className="text-muted-foreground">
-                We typically require a 50% deposit to begin work, with the remaining 50% due upon completion. For larger projects, we may break the payments into more milestones. We accept credit cards, bank transfers, and PayPal.
               </p>
             </div>
           </div>

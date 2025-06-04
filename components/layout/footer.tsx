@@ -11,7 +11,7 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">
-              WebCraft<span className="text-blue-500">Studio</span>
+              InnovaTech<span className="text-blue-500">Developers</span>
             </h3>
             <p className="text-muted-foreground mb-4">
               We build stunning, custom websites that help businesses stand out and grow online.
@@ -20,12 +20,10 @@ export function Footer() {
               <a href="https://facebook.com" className="text-muted-foreground hover:text-blue-500 transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com" className="text-muted-foreground hover:text-blue-500 transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/innovatechdeveloperss?igsh=MXhrOTkzd3ZzeXdzcQ==" className="text-muted-foreground hover:text-blue-500 transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="https://linkedin.com" className="text-muted-foreground hover:text-blue-500 transition-colors" aria-label="LinkedIn">
-                <Linkedin size={20} />
-              </a>
+             
             </div>
           </div>
 
@@ -96,25 +94,25 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <MapPin size={20} className="mr-2 mt-1 text-blue-500" />
-                <span className="text-muted-foreground">123 Web Street, Digital City, 10001</span>
+            <ul className="space-y-2">
+              <li className="flex items-center">
+                <Phone size={20} className="mr-2 text-blue-500" />
+                <span className="text-muted-foreground">+91 7013405687</span>
               </li>
               <li className="flex items-center">
                 <Phone size={20} className="mr-2 text-blue-500" />
-                <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                <span className="text-muted-foreground">+91 6304623705</span>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="mr-2 text-blue-500" />
-                <span className="text-muted-foreground">hello@webcraftstudio.com</span>
+                <span className="text-muted-foreground">innovatechdeveloperss@gmail.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-200 text-center text-muted-foreground">
-          <p>&copy; {currentYear} WebCraftStudio. All rights reserved.</p>
+          <p>&copy; {currentYear} InnovaTech Developers. All rights reserved.</p>
         </div>
       </div>
     </footer>

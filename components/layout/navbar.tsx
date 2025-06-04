@@ -9,7 +9,6 @@ import { cn } from '@/lib/utils';
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
-  { label: 'Portfolio', href: '/portfolio' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -41,7 +40,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold">
-          WebCraft<span className="text-blue-500">Studio</span>
+          InnovaTech<span className="text-blue-500">Developers</span>
         </Link>
 
         {/* Desktop Navigation */}

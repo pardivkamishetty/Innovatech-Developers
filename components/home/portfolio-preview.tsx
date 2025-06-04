@@ -5,23 +5,12 @@ import { ArrowRight } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Mountain Escape Resort',
-    category: 'Hospitality',
-    imageUrl: 'https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-    link: '/portfolio/mountain-escape'
+    title: 'Padmalaya High School',
+    category: 'Education',
+    imageUrl: 'https://ik.imagekit.io/scmp79fg7/SCHOOL%20WEBSITE%20PHOTOS%20(2)/SCHOOL%20WEBSITE%20PHOTOS/Screenshot%202025-06-04%20125500.png?updatedAt=1749021969021',
+    link: 'https://padmalayahighschool.in' // <-- Add the actual website URL here
   },
-  {
-    title: 'Bloom Botanicals',
-    category: 'E-commerce',
-    imageUrl: 'https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-    link: '/portfolio/bloom-botanicals'
-  },
-  {
-    title: 'Urban Architects',
-    category: 'Professional Services',
-    imageUrl: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-    link: '/portfolio/urban-architects'
-  }
+  // Add more projects as needed
 ];
 
 export function PortfolioPreview() {
@@ -40,6 +29,8 @@ export function PortfolioPreview() {
             <Link 
               key={index} 
               href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
             >
               <div className="relative h-64 overflow-hidden">
@@ -57,14 +48,6 @@ export function PortfolioPreview() {
               </div>
             </Link>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Button asChild size="lg">
-            <Link href="/portfolio" className="group">
-              View All Projects <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
         </div>
       </div>
     </section>
