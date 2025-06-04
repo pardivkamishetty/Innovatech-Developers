@@ -23,7 +23,7 @@ export default function ContactPage() {
             <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-center">
               <h2 className="text-2xl font-bold mb-6 text-center">Contact Through WhatsApp</h2>
               <a
-                href="https://wa.me/917013405687"
+                href="https://wa.me/916304623705"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg text-lg font-semibold hover:bg-green-700 transition"
