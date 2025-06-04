@@ -13,7 +13,7 @@ export function CTASection() {
           <Button asChild size="lg" variant="secondary">
             <Link href="/contact">Get a Free Quote</Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
+          <Button asChild size="lg" variant="outline" className="text-black border-white hover:bg-white/10">
             <Link href="/portfolio">View Our Work</Link>
           </Button>
         </div>
